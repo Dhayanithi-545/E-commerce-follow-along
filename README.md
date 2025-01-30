@@ -59,3 +59,49 @@ This project is a simple User Management System that allows the creation, retrie
 - **User Controller**: Manages operations like adding, retrieving, and updating user information.
 - **File Uploads**: Accepts and stores user-uploaded files (e.g., profile images).
 - **Documentation**: Well-documented code for ease of 
+
+**Milestone 5: Upload and Download User Information from Files**
+
+This milestone focuses on implementing the ability to upload and download user information using files.
+
+**Key Features:**
+
+- **File Upload:** Implemented functionality to allow users to upload their information via files.
+- **File Download:** Users can download their stored information in a structured format.
+- **Security Considerations:** Ensured secure file handling to prevent vulnerabilities.
+
+**Tech Stack:**
+
+- **Backend:** Node.js, Express
+- **Database:** MongoDB, Mongoose
+- **File Handling:** Multer
+
+---
+
+**Milestone 6: Secure User Signup with Password Encryption**
+
+In this milestone, we created a backend endpoint for the Signup page to securely store user data. The password is encrypted before being stored in the database to enhance security.
+
+**Key Features:**
+
+- **Password Encryption:** Used `bcrypt` to hash the user's password before saving it in the database.
+- **User Data Storage:** Stored complete user details securely while keeping the password protected.
+- **Security Compliance:** Followed best practices for data protection and compliance with security standards.
+
+**Implementation Steps:**
+
+1. Installed and configured `bcrypt` for password hashing.
+2. Updated the user model to store hashed passwords instead of plain text.
+3. Created a signup API endpoint that encrypts passwords before storing user data in MongoDB.
+4. Implemented error handling and validation for user registration.
+
+**Tech Stack:**
+
+- **Backend:** Node.js, Express
+- **Database:** MongoDB, Mongoose
+- **Security:** Bcrypt for password hashing
+
+**Next Steps:**
+In the upcoming milestone, we will build more advanced features for the application, enhancing user experience and security measures.
+
+ 
