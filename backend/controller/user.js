@@ -1,12 +1,15 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
-const User = require("../Modal/user");
+const User = require("../modal/user");
 const router = express.Router();
 const { upload } = require("../multer");
-const ErrorHandler = require("../utility/ErrorHandler");
-const catchAsyncErrors = require("../middleware/catchAsyncError");
+const ErrorHandler = require("../utils/ErrorHandler");
+const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const sendMail = require("../utils/sendEmail");
+const sendToken = require("../utils/jwtToken");
 require("dotenv").config();
 
 
@@ -14,7 +17,7 @@ require("dotenv").config();
 
 
 
-router.post(
+router.post(  
     "/create-user",
     upload.single("file"), // Expect file to be named "file"
     catchAsyncErrors(async (req, res, next) => {
@@ -77,8 +80,12 @@ router.post("/login", catchAsyncErrors(async (req, res, next) => {
     res.status(200).json({
         success: true,
         user,
-    });
+    }); 
 }));
+
+//Account Activation
+
+
 
 
 module.exports = router;

@@ -104,4 +104,10 @@ In this milestone, we created a backend endpoint for the Signup page to securely
 **Next Steps:**
 In the upcoming milestone, we will build more advanced features for the application, enhancing user experience and security measures.
 
- 
+## Milestone 7: User Login
+
+In this milestone, I implemented a backend endpoint for user login. The endpoint:
+1. Accepts user credentials (email and password).
+2. Validates the user's existence in the database.
+3. Compares the hashed password using `bcrypt`.
+4. Returns appropriate responses for success or failure.
